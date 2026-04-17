@@ -1,0 +1,18 @@
+config:
+  target: "http://127.0.0.1:3000"
+  phases:
+    - duration: 20
+      arrivalRate: 5
+  defaults:
+    headers:
+      User-Agent: "artillery"
+scenarios:
+  - name: "Home + health"
+    flow:
+      - get:
+          url: "/"
+      - get:
+          url: "/api/health"
+      - get:
+          url: "/?range=14d&method=GoPay&processor=Processor%20B&outcome=Declined&min=50000&max=5000000"
+
