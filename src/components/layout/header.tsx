@@ -40,7 +40,13 @@ export function Header() {
         <OutcomeFilter />
         <AmountRangeFilter />
         <DateRangePicker />
-        <Button variant="outline" size="icon" className="h-8 w-8">
+        <Button
+          type="button"
+          variant="outline"
+          size="icon"
+          className="h-8 w-8"
+          aria-label="Notifications"
+        >
           <Bell className="h-4 w-4" />
         </Button>
       </div>

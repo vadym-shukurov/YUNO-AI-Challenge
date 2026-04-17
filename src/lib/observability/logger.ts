@@ -1,3 +1,8 @@
+/**
+ * Minimal structured logging for the browser and server runtimes. Events are JSON lines
+ * with stable `message` prefixes (`app.*`, `api.*`, …) so production pipelines can route
+ * or alert without parsing ad-hoc strings.
+ */
 export type LogLevel = "debug" | "info" | "warn" | "error";
 
 export interface LogEvent {

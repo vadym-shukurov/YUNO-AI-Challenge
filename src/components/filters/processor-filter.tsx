@@ -29,7 +29,11 @@ export function ProcessorFilter() {
       value={processor}
       onValueChange={(value) => setProcessor(value as Processor | "all")}
     >
-      <SelectTrigger className="h-8 w-[170px]" data-testid="filter-processor">
+      <SelectTrigger
+        className="h-8 w-[170px]"
+        data-testid="filter-processor"
+        aria-label="Filter by processor"
+      >
         <div className="flex items-center gap-2">
           <Split className="h-4 w-4 text-muted-foreground" />
           <SelectValue placeholder="Processor" />

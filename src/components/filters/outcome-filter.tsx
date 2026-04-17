@@ -35,7 +35,11 @@ export function OutcomeFilter() {
       value={outcome}
       onValueChange={(value) => setOutcome(value as TransactionStatus | "all")}
     >
-      <SelectTrigger className="h-8 w-[160px]" data-testid="filter-outcome">
+      <SelectTrigger
+        className="h-8 w-[160px]"
+        data-testid="filter-outcome"
+        aria-label="Filter by transaction outcome"
+      >
         <div className="flex items-center gap-2">
           {ICON[outcome]}
           <SelectValue placeholder="Outcome" />

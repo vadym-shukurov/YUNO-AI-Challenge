@@ -21,7 +21,11 @@ export function PaymentMethodFilter() {
       value={paymentMethod}
       onValueChange={(value) => setPaymentMethod(value as PaymentMethod | "all")}
     >
-      <SelectTrigger className="h-8 w-[170px]" data-testid="filter-method">
+      <SelectTrigger
+        className="h-8 w-[170px]"
+        data-testid="filter-method"
+        aria-label="Filter by payment method"
+      >
         <div className="flex items-center gap-2">
           <Wallet className="h-4 w-4 text-muted-foreground" />
           <SelectValue placeholder="Payment method" />

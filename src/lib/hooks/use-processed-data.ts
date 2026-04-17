@@ -1,5 +1,11 @@
 "use client";
 
+/**
+ * React entry point for dashboard analytics: applies URL-backed filters from `useFilters`
+ * to the mock transaction stream and returns memoized aggregates (KPIs, charts, alerts,
+ * table rows). Pure aggregation lives in `./processed-data` so it stays testable without
+ * the DOM or router.
+ */
 import { useMemo } from "react";
 
 import {

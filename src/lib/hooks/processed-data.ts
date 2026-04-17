@@ -1,3 +1,7 @@
+/**
+ * Pure functions that turn a transaction list + filter snapshot into dashboard-ready
+ * aggregates (approval trends, processor mix, Smart Alert inputs, search-backed subsets).
+ */
 import { differenceInDays, format, startOfDay, startOfHour } from "date-fns";
 
 import {
